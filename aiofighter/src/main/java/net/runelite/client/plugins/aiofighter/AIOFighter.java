@@ -142,7 +142,7 @@ public class AIOFighter extends PScript {
         enemiesToTarget = PUtils.parseCommaSeparated(config.enemyNames());
         foodsToEat = PUtils.parseCommaSeparated(config.foodNames());
         lootNames = PUtils.parseCommaSeparated(config.lootNames());
-        maxEatHp = Math.min(PSkills.getActualLevel(Skill.HITPOINTS), config.maxEatHP());
+        maxEatHp = Math.min(PSkills.getActualLevel(Skill.PRAYER), config.maxEatHP());
         minEatHp = Math.min(config.minEatHP(), maxEatHp);
         nextEatAt = (int)PUtils.randomNormal(minEatHp, maxEatHp);
         validTargetFilter = createValidTargetFilter();
@@ -250,7 +250,7 @@ public class AIOFighter extends PScript {
     }
 
     private boolean handleEating(){
-        if (PSkills.getCurrentLevel(Skill.HITPOINTS) <= nextEatAt){
+        if (PSkills.getCurrentLevel(Skill.PRAYER) <= nextEatAt){
             nextEatAt = (int)PUtils.randomNormal(minEatHp, maxEatHp);
             log.info("Next eat at " + nextEatAt);
             NPC targetBeforeEating = null;
