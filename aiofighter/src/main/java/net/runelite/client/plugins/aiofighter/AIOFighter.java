@@ -41,9 +41,9 @@ import java.util.stream.Collectors;
 @Extension
 @PluginDependency(PaistiSuite.class)
 @PluginDescriptor(
-        name = "AiO Fighter",
+        name = "auto combatr",
         enabledByDefault = false,
-        description = "Fully configurable all-in-one fighter",
+        description = "123Fully configurable all-in-one fighter",
         tags = {"combat", "magic", "fighter", "paisti"}
 )
 
